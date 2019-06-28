@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatButtonModule, MatCheckboxModule, MatIconModule, MatProgressSpinnerModule, MatProgressBarModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatIconModule, MatProgressSpinnerModule, MatProgressBarModule, MatDialog, MatDialogModule} from '@angular/material';
+import { MyDialogComponent } from './my-dialog/my-dialog.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -18,9 +20,13 @@ import {MatButtonModule, MatCheckboxModule, MatIconModule, MatProgressSpinnerMod
     MatCheckboxModule,
     MatIconModule,
     MatProgressSpinnerModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDialogModule
   ],
   providers: [],
+  entryComponents: [
+    MyDialogComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
